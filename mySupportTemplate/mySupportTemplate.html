@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>mySupportTemplate</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-submenu.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+
+    <nav class="navbar navbar-default navbar-static-top" id="level-0">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">mySupportTemplate</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="static-position">
+            <li class="dropdown" id="static-position"> <!-- Account tab -->
+              <a tabindex="0" data-toggle="dropdown" aria-expanded="false" onclick = "getCategory('account')">Account<span class="caret"></span></a>
+              <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+              <ul class="dropdown-menu" role="menu" id="level-1">
+
+                <li class="dropdown-submenu">
+                  <a tabindex="0" data-toggle="dropdown">Creating</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0" onclick = "getSubCategory('new-account-setup')">New Account Setup</a></li>
+                    <!-- <li><a tabindex="0" onclick = "getTemplate('New Account Setup')">New Account Setup</a></li> -->
+                    <li><a tabindex="0" onclick = "getSubCategory('user-management')">User Management</a></li>
+                    <li><a tabindex="0" onclick = "getSubCategory('setting-up-manager')">Setting-up-Manager</a></li>
+                    <li><a tabindex="0" onclick = "getSubCategory('setting-up-staff-in-charge')">Setting-up-Staff-In-Charge</a></li>
+                  </ul>
+                </li>
+                <li><a tabindex="0" data-toggle="dropdown">Accessing (Login)</a></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="0" data-toggle="dropdown">Managing</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">Account Admin Change</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a tabindex="0" data-toggle="dropdown">Modifying</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">Deleting-User</a></li>
+                    <li><a tabindex="0">Changing-Country-Field</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown"><!-- Certificate tab -->
+              <a tabindex="0" data-toggle="dropdown" aria-expanded="false">Certificate<span class="caret"></span></a>
+              <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+              <ul class="dropdown-menu" role="menu" id="level-1">
+                <li class="dropdown-submenu"><!-- Server SSL tab-->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">Server SSL</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu"><!-- Order Status (What is My Order Status) -->
+                      <a tabindex="0" data-toggle="dropdown">Order Status (What is My Order Status)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Partner/Reseller</a></li>
+                        <li><a tabindex="0">Phishing</a></li>
+                        <li><a tabindex="0">Alpha/Domain</a></li>
+                        <li><a tabindex="0">OV</a></li>
+                        <li><a tabindex="0">EV</a></li> 
+                        <li><a tabindex="0">MSSL</a></li>
+                        <li><a tabindex="0">ePKI</a></li>
+                        <li><a tabindex="0">CloudSSL</a></li>              
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- Pre-Sales (Choosing the right product) -->
+                      <a tabindex="0" data-toggle="dropdown">Pre-Sales (Choosing the right product)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- Ordering -->
+                      <a tabindex="0" data-toggle="dropdown">Ordering</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Switching-From-Competitor</a></li>
+                        <li><a tabindex="0">Renewing-option</a></li>
+                        <li><a tabindex="0">SANs</a></li>
+                        <li><a tabindex="0">Internal-Server-Names</a></li>
+                        <li class="dropdown-submenu"><!-- Ordering -->
+                          <a tabindex="0" data-toggle="dropdown">Generating-CSR</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">Microsoft</a></li>
+                            <li><a tabindex="0">Apache (OpenSSL)</a></li>
+                            <li><a tabindex="0">Other</a></li>               
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">Auto-CSR</a></li>
+                        <li><a tabindex="0">Payment-In-Arreas</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- Approving -->
+                      <a tabindex="0" data-toggle="dropdown">Approving</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Approval Email</a></li>
+                        <li><a tabindex="0">Meta-Tag</a></li>
+                        <li><a tabindex="0">DNS-TXT-Record</a></li>
+                        <li><a tabindex="0">WHOIS-Records</a></li>
+                        <li><a tabindex="0">Passphrase</a></li>
+                        <li><a tabindex="0">Hello-World</a></li>
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">Downloading</a></li>
+                    <li class="dropdown-submenu"><!-- Installing -->
+                      <a tabindex="0" data-toggle="dropdown">Installing</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li class="dropdown-submenu">
+                          <a tabindex="0" data-toggle="dropdown">Microsoft</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">IIS</a></li>
+                            <li><a tabindex="0">Exchange</a></li>
+                            <li><a tabindex="0">F5</a></li>               
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu"><!-- Ordering -->
+                          <a tabindex="0" data-toggle="dropdown">Apache</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">CentOS</a></li>
+                            <li><a tabindex="0">Ubuntu</a></li>
+                            <li><a tabindex="0">UNIX</a></li>               
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">TomCat</a></li>
+                        <li><a tabindex="0">cPanel</a></li>  
+                        <li><a tabindex="0">OneClick</a></li>               
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">Site Seal</a></li>              
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- Client (Digital ID) tab -->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">Client (Digital ID)</a>
+                  <ul class="dropdown-menu" id="level-2">
+                 	  <li class="dropdown-submenu"><!-- Order Status (What is My Order Status) tab -->
+                      <a tabindex="0" data-toggle="dropdown">Order Status (What is My Order Status)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li class="dropdown-submenu"><!-- Undergoing Vetting -->
+                          <a tabindex="0" data-toggle="dropdown">Undergoing Vetting</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">PersonalSign 2 Pro / PersonalSign 2 Department</a></li>
+                            <li><a tabindex="0">PC3 Pro (PersonalSign 3 Pro)</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu"><!-- Resolve my Vetting Issue -->
+                          <a tabindex="0" data-toggle="dropdown">Resolve my Vetting Issue</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">ID Copy</a></li>
+                            <li><a tabindex="0">Application form</a></li>
+                          </ul>
+                        </li>             
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- PC (PersonalSign) -->
+                      <a tabindex="0" data-toggle="dropdown">PC (PersonalSign)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">PersonalSign 1</a></li>
+                        <li><a tabindex="0">PersonalSign 2 Pro</a></li>
+                        <li><a tabindex="0">PersonalSign 2 Department</a></li>                
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- PC3 Pro (PersonalSign 3 Pro) -->
+                      <a tabindex="0" data-toggle="dropdown">PC3 Pro (PersonalSign 3 Pro)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Belgium</a></li>
+                        <li><a tabindex="0">Netderlands</a></li>             
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- Code Signing -->
+                      <a tabindex="0" data-toggle="dropdown">Code Signing</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">EV CodeSigning</a></li>
+                        <li><a tabindex="0">Java</a></li>
+                        <li><a tabindex="0">MS</a></li>                
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- Adobe PDF Signing -->
+                      <a tabindex="0" data-toggle="dropdown">Adobe PDF Signing</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">AATL</a></li>
+                        <li><a tabindex="0">HSM</a></li>
+                        <li><a tabindex="0">Hosted HSM</a></li>                
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- OneClickSSL -->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">OneClickSSL</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu">
+                      <a tabindex="0" data-toggle="dropdown">Installation</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- CloudSSL -->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">CloudSSL</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu">
+                      <a tabindex="0" data-toggle="dropdown">Installation</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- CIT -->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">CIT</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu">
+                      <a tabindex="0" data-toggle="dropdown">CIT Account</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- API -->
+                  <a tabindex="0" data-toggle="dropdown" aria-expanded="false">API</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu"><!-- PersonalSign -->
+                      <a tabindex="0" data-toggle="dropdown">PersonalSign</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- PersonalSign 3 Pro -->
+                      <a tabindex="0" data-toggle="dropdown">PersonalSign 3 Pro</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Retail</a></li>
+                        <li><a tabindex="0">Enterprise</a></li>
+                        <li><a tabindex="0">Partners (Reselers)</a></li>                
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- Testing -->
+                  <a tabindex="0" data-toggle="dropdown">Testing</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">SSL Configuration Checker Issue</a></li>
+                    <li class="dropdown-submenu"><!-- SSL Test -->
+                      <a tabindex="0" data-toggle="dropdown">SSL Test</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Internal</a></li>
+                        <li><a tabindex="0">External</a></li>
+                      </ul>
+                    </li>
+              
+                    <li class="dropdown-submenu"><!-- SSL Test -->
+                      <a tabindex="0" data-toggle="dropdown">SSL Test</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li class="dropdown-submenu">
+                          <a tabindex="0" data-toggle="dropdown">Internal</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">SSL Connectors / Bindings</a></li>
+                            <li><a tabindex="0">Certificate Stores</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">External</a></li>
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">External</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- Managing -->
+                  <a tabindex="0" data-toggle="dropdown">Managing</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu"><!-- Update/Change SANs (Additional Domains) -->
+                      <a tabindex="0" data-toggle="dropdown">Update/Change SANs (Additional Domains)</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Adding SANs (Subject Alternative Names)</a></li>
+                        <li><a tabindex="0">Replacing SANs</a></li>        
+                        <li><a tabindex="0">Dropping (Remove Existing SANs)</a></li>               
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">Reissuing</a></li>
+                    <li><a tabindex="0">Revoking</a></li>
+                    <li class="dropdown-submenu"><!-- Cancelling -->
+                      <a tabindex="0" data-toggle="dropdown">Cancelling</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li class="dropdown-submenu"><!-- Retail -->
+                          <a tabindex="0" data-toggle="dropdown">Retail</a>
+                          <ul class="dropdown-menu" id="level-4">
+                            <li><a tabindex="0">Cancellation-Request</a></li>
+                            <li><a tabindex="0">Cancellation-Confirmation</a></li>            
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">Partner</a></li>
+                        <li><a tabindex="0">Support-Management</a></li>               
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">CE/CEAP (Alpha SSL)</a></li>
+                    <li><a tabindex="0">DV (Domain SSL)</a></li>
+                    <li><a tabindex="0">OV (Organization SSL)</a></li>
+                    <li><a tabindex="0">EV (Extended Validation SSL)</a></li>
+                  </ul>
+                </li>
+                <li><a tabindex="0"></a></li>
+                <li class="dropdown-submenu"><!-- MSSL (Managed SSL) -->
+                  <a tabindex="0" data-toggle="dropdown">MSSL (Managed SSL)</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu"><!-- MSSL Profile -->
+                      <a tabindex="0" data-toggle="dropdown">MSSL Profile</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Adding SANs (Subject Alternative Names)</a></li>
+                        <li><a tabindex="0">Replacing SANs</a></li>        
+                        <li><a tabindex="0">Dropping (Remove Existing SANs)</a></li>               
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- ePKI Profile and License -->
+                      <a tabindex="0" data-toggle="dropdown">ePKI Profile and License</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Adding SANs (Subject Alternative Names)</a></li>
+                        <li><a tabindex="0">Replacing SANs</a></li>        
+                        <li><a tabindex="0">Dropping (Remove Existing SANs)</a></li>               
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu"><!-- ePKI (Enterprise PKI) -->
+                  <a tabindex="0" data-toggle="dropdown">ePKI (Enterprise PKI)</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li class="dropdown-submenu"><!-- ePKI Admin Cert -->
+                      <a tabindex="0" data-toggle="dropdown">ePKI Admin Cert</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Adding SANs (Subject Alternative Names)</a></li>
+                        <li><a tabindex="0">Replacing SANs</a></li>        
+                        <li><a tabindex="0">Dropping (Remove Existing SANs)</a></li>               
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><!-- ePKI Profile and License -->
+                      <a tabindex="0" data-toggle="dropdown">ePKI Profile and License</a>
+                      <ul class="dropdown-menu" id="level-3">
+                        <li><a tabindex="0">Adding SANs (Subject Alternative Names)</a></li>
+                        <li><a tabindex="0">Replacing SANs</a></li>        
+                        <li><a tabindex="0">Dropping (Remove Existing SANs)</a></li>               
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown" id="static-position"><!-- System -->
+              <a tabindex="0" data-toggle="dropdown" aria-expanded="false">System<span class="caret"></span></a>
+              <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+              <ul class="dropdown-menu" id="level-1">
+                <li><a tabindex="0">Email-Templates (Mail Template Group)</a></li>
+                <li><a tabindex="0">ePKI-Templates</a></li>    
+                <li><a tabindex="0">MSSL Profiles</a></li>       
+              </ul>
+            </li>
+            <li class="dropdown" id="static-position"><!-- General -->
+              <a tabindex="0" data-toggle="dropdown" aria-expanded="false">General<span class="caret"></span></a>
+              <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+              <ul class="dropdown-menu" id="level-1">
+                <li><a tabindex="0">Not-related</a></li> 
+                <li class="dropdown-submenu"><!-- No-Support -->
+                  <a tabindex="0" data-toggle="dropdown">No-Support</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">PersonalSign 1</a></li>
+                    <li><a tabindex="0">Partner/Reseller</a></li>
+                    <li><a tabindex="0">Competitor</a></li>          
+                  </ul>
+                </li>  
+                <li class="dropdown-submenu"><!-- SPAM -->
+                  <a tabindex="0" data-toggle="dropdown">SPAM</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">SPAM</a></li>
+                    <li><a tabindex="0">Other SPAM</a></li>
+                  </ul>
+                </li>      
+                <li><a tabindex="0">Clarification</a></li>  
+                <li><a tabindex="0">Thank-you-message</a></li>
+              </ul>
+            </li>
+            <li class="dropdown" id="static-position"><!-- Incident -->
+              <a tabindex="0" data-toggle="dropdown" aria-expanded="false" onclick = "getCategory('Incident')">Incident<span class="caret"></span></a>
+              <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+              <ul class="dropdown-menu" id="level-1">
+                <li><a tabindex="0" onclick = "getSubCategory('Inform')">Inform</a></li>
+                <li><a tabindex="0" onclick = "getSubCategory('Update')">Update</a></li>       
+                <li><a tabindex="0" onclick = "getSubCategory('Restored')">Restored</a></li>
+                <li class="dropdown-submenu"><!-- BUG -->
+                  <a tabindex="0" data-toggle="dropdown">BUG</a>
+                  <ul class="dropdown-menu" id="level-2">
+                    <li><a tabindex="0">BUG-1</a></li>
+                    <li><a tabindex="0">BUG-2</a></li>
+                    <li><a tabindex="0">BUG-3</a></li>
+                    <li><a tabindex="0">BUG-4</a></li>
+                  </ul>
+                </li>   
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><input type="text" class="form-control search" placeholder="#hashtags"></li>
+            <li class="dropdown" id="static-position">
+              <a tabindex="0" aria-expanded="false"><span class="glyphicon glyphicon-user"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="page">
+      <div class="page-header">
+        <!-- <h1 id="header-title">Server Certificate <small id="header-subtitle">Organization SSL</small></h1> -->
+        <h1 id="header-title">Title</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10"><!-- left side -->
+          
+          <div>
+            <textarea class="form-control" id="emailTemplateOutput">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+          </div>        
+        </div>
+
+        <div class="col-md-2"><!-- right side -->
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Hash Algorithm</h3>
+            </div>
+            <div class="panel-body">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="hashAlgorithmOption" id="optionSHA1" value="option1">
+                  SHA-1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="hashAlgorithmOption" id="optionSHA256" value="option2">
+                  SHA-256
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Type of Certificate</h3>
+            </div>
+            <div class="panel-body">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="certificateTypeOption" id="optionAlphaSSL" value="option1">
+                  AlphaSSL
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="certificateTypeOption" id="optionDomainSSL" value="option2">
+                  DomainSSL
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="certificateTypeOption" id="optionOrganizationSSL" value="option3">
+                  OrganizationSSL
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="certificateTypeOption" id="optionExtendedSSL" value="option4">
+                  ExtendedSSL
+                </label>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.Side-Panel -->
+
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-submenu.min.js"></script>
+
+    <script>
+        $('.dropdown-submenu > a').submenupicker();
+    </script>
+    <script>
+      $('.navbar-collapse').click(function () { 
+        
+        if (!$(this).parent().hasClass('open')) {
+              $('html').addClass('menu-open');  
+          
+        } else {
+           $('html').removeClass('menu-open');  
+      }
+          
+      });
+
+      $(document).on('click touchstart', function (a) {
+              if ($(a.target).parents().index($('.navbar-nav')) == -1) {
+                      $('html').removeClass('menu-open');  
+              }
+      });
+    </script>
+   
+  </body>
+</html>
