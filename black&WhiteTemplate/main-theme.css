@@ -1,0 +1,134 @@
+/*
+ * Globals
+ */
+html, body { 
+	height: 100%;
+	margin: 0; 
+	padding: 0;
+	text-align: center;
+	overflow:hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Fixed height of the footer */
+  background-color: #eee;
+}
+
+footer p {
+	padding-top: 10px;
+}
+
+.btn {
+	border-radius: 0px;
+	padding: 10px 20px;
+	font-weight: bold;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+/*
+ * Custom Black Theme
+ */
+
+.black {
+	color: #fff;
+	background-color: #333;
+	height: 100%;
+}
+
+/* Custom white button */
+.btn-white { 
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Custom black menu */
+.btn-white:hover,
+.btn-white:focus {
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #fff;
+}
+
+.masthead-nav.black > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav.black > li > a:hover,
+.masthead-nav.black > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav.black > .active > a,
+.masthead-nav.black > .active > a:hover,
+.masthead-nav.black > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/*
+ * Custom White Theme
+ */
+
+.white {
+	color: #333;
+	background-color: #fff;
+	height: 100%;
+}
+
+/* Custom black button */
+.btn-black {
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #333;
+}
+
+.btn-black:hover,
+.btn-black:focus {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+}
+
+/* Custom white menu */
+.masthead-nav.white > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* IE8 proofing */
+  color: rgba(51, 51, 51, 1);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav.white > li > a:hover,
+.masthead-nav.white > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(169, 169, 169, 1);
+}
+.masthead-nav.white > .active > a,
+.masthead-nav.white > .active > a:hover,
+.masthead-nav.white > .active > a:focus {
+  color: #333;
+  border-bottom-color: #333;
+}
